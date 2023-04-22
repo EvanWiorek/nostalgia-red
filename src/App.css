@@ -439,6 +439,22 @@ body {
   z-index: 1;
 }
 
+.linked-in, .github {
+  position: relative;
+  width: 43px;
+  image-rendering: pixelated;
+}
+
+.linked-in {
+  top: -126px;
+  left: -43px;
+}
+
+.github {
+  top: -126px;
+  left: -43px;
+}
+
 /* Media Queries */
 
 /* Phone Size */ 
