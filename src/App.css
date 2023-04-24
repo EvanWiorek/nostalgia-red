@@ -123,8 +123,26 @@ body {
   margin: auto;
 }
 
+.fetch-button {
+  background: transparent;
+  border: 0;
+  padding: 6px 8px;
+  color: white;
+  font-size: .7rem;
+}
+
 .pokemon-fetch-button {
   position: absolute;
+  /* top: 605px;
+  left: 710px; */
+  top: 205px;
+  left: 445px;
+  z-index: 101;
+  cursor: pointer;
+  background-color: rgba(0,0,0,.4);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  animation: bgFade 14s infinite;
 }
 
 #background-green {

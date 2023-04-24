@@ -24,7 +24,7 @@ export default ({ setPokemonArr, isClicked, setIsClicked}) => {
   return (
     <>
     <form onSubmit={handleSubmit}>
-      <input type="submit" className="btn btn-warning" value="Pokemon List" />
+      <input type="submit" className='fetch-button' value="GO BACK" />
     </form>
     </>
   )
