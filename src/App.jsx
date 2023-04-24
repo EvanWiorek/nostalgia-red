@@ -5,10 +5,11 @@ import PokemonFetch from "./components/PokemonFetch";
 import PokemonList from "./components/PokemonList";
 import PokemonDisplay from "./components/PokemonDisplay";
 import AboutDisplay from "./views/AboutDisplay";
-import dmgBg from "./assets/dmg-bg.png";
+import dmgBgOn from "./assets/dmg-bg.png";
+import dmgBgOff from "./assets/dmg-bg-off.png";
 import bgMusic from "./assets/pallet-town-theme.mp3";
-import nintendoLogo from "./assets/nintendo-logo.png"
-import startupSound from "./assets/nintendo-startup.mp3"
+import nintendoLogo from "./assets/nintendo-logo.png";
+import startupSound from "./assets/nintendo-startup.mp3";
 
 function App() {
   const [pokemonArr, setPokemonArr] = useState([]);
@@ -22,9 +23,9 @@ function App() {
   //sound manipulation
   const backgroundMusic = new Audio(bgMusic);
   const [bgMusicStatus, setBgMusicStatus] = useState(false);
-  const nintendoStartSound = new Audio(startupSound)
+  const nintendoStartSound = new Audio(startupSound);
   backgroundMusic.volume = 0.1;
-  nintendoStartSound.volume = 0.1
+  nintendoStartSound.volume = 0.1;
   const bgRef = useRef(backgroundMusic);
 
   const playBgMusic = () => {
@@ -40,18 +41,28 @@ function App() {
 
   const playNintendoSound = () => {
     nintendoStartSound.play();
-  }
+  };
 
-  useEffect(() => {
-    setTimeout(playNintendoSound, 2700);
-    setTimeout(nintendoStartup, 4150);
-    
-  }, []);
-
-  // setTimeout(setLoadContent(true), 10);
   const nintendoStartup = () => {
-    setLoadContent(true)
-  }
+    setLoadContent(true);
+    document.getElementById("startup-bg").style.display = "none";
+    playBgMusic();
+  };
+
+  // useEffect(() => {
+
+  // }, []);
+
+  const turnGameboyOn = () => {
+    document.getElementById("on-button").style.display = "none";
+    document.getElementById("screen-dark").style.display = "none";
+    document.getElementById("dmg-img-off").style.display = "none";
+    document.getElementById("startup-bg").style.display = "block";
+    document.getElementById("dmg-img-on").style.display = "block";
+    setTimeout(playNintendoSound, 2450);
+    setTimeout(nintendoStartup, 4200);
+    document.getElementById("nintendo-animation").style.display = "block";
+  };
 
   return (
     <div className="text-center mt-3 m-auto">
@@ -64,11 +75,22 @@ function App() {
           setIsClicked={setIsClicked}
         />
       </div>
+      <h1 id="on-button" onClick={turnGameboyOn}>
+        Click here to turn on Gameboy
+      </h1>
+      <div id="screen-dark" ></div>
       <div className="dmg-bg">
-        <img src={dmgBg} alt="DMG" className="dmg-img" />
+        <img src={dmgBgOff} alt="DMG" id="dmg-img-off" />
+        <img src={dmgBgOn} alt="DMG" id="dmg-img-on" />
+        <div id="startup-bg"></div>
         <div className="glass-illusion"></div>
-        {/* <div className="nintendo-logo">Nintendo</div> */}
-        <img src={nintendoLogo} alt="Nintendo Logo" className="nintendo-logo"/>
+
+        <img
+          src={nintendoLogo}
+          alt="Nintendo Logo"
+          className="nintendo-logo"
+          id="nintendo-animation"
+        />
         {loadContent && (
           <div className="pokemon-box m-auto col-11">
             <Routes>
@@ -107,7 +129,8 @@ function App() {
             </Routes>
           </div>
         )}
-        <div className="background-green"></div>
+        <div id="background-green"></div>
+        {/* <div id="background-gray"></div> */}
       </div>
     </div>
   );
