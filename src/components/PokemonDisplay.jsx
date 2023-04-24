@@ -8,7 +8,7 @@ export default ({ pokemon, pokemonId, speciesLink }) => {
   types = types.split(",");
   types = types.join(", ");
 
-  // console.log(speciesLink.flavor_text_entries[0]);
+  console.log(speciesLink.flavor_text_entries);
   let cleanDescription = speciesLink.flavor_text_entries[0].flavor_text.replace(
     /(\r\n|\n|\r|\f)/gm,
     " "

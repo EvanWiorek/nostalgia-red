@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import pokeball from "../assets/pokeball.png";
+import clickSound from "../assets/click-sound.wav";
+import crySound1 from "../assets/cry-sound1.wav";
 
 export default ({
   pokemonArr,
@@ -9,9 +12,20 @@ export default ({
   setPokemonId,
   speciesLink,
   setSpeciesLink,
+  playBgMusic,
+  pauseBgMusic,
+  bgMusicStatus,
+  setBgMusicStatus,
 }) => {
+  const clickSoundLoaded = new Audio(clickSound);
+  clickSoundLoaded.volume = 0.05;
+
+  const playClickSound = () => {
+    clickSoundLoaded.play();
+  };
 
   const pokemonClick = (pokemonUrl) => {
+    playClickSound();
     axios.get(`${pokemonUrl}`).then((response) => {
       if (parseInt(response.data.id) < 10) {
         setPokemonId(`00${response.data.id}`);
@@ -27,54 +41,9 @@ export default ({
       return axios.get(`${response.data.species.url}`).then((response) => {
         setSpeciesLink(response.data);
         setLoaded(true);
-      })
+      });
     });
   };
-
-
-
-  // const pokemonClick1 = (pokemonUrl) => {
-  //   axios.all([
-  //     axios.get(`${pokemonUrl}`).then((response) => {
-  //       if (parseInt(response.data.id) < 10) {
-  //         setPokemonId(`00${response.data.id}`);
-  //       } else if (
-  //         parseInt(response.data.id) > 9 &&
-  //         parseInt(response.data.id) < 100
-  //       ) {
-  //         setPokemonId(`0${response.data.id}`);
-  //       } else if (parseInt(response.data.id) > 99) {
-  //         setPokemonId(`${response.data.id}`);
-  //       }
-  //       // setSpeciesLink(response.data.species.url);
-  //       setPokemon(response.data);
-  //     }),
-  //     axios.get(`${response.data.species.url}`).then((response) => {
-  //       // console.log(response.data);
-  //       setSpeciesLink(response.data)
-  //     })
-  //   ])
-  //   setLoaded(true);
-  // }
-
-
-  // const pokemonClickOG = (pokemonUrl) => {
-  //   axios.get(`${pokemonUrl}`).then((response) => {
-  //     if (parseInt(response.data.id) < 10) {
-  //       setPokemonId(`00${response.data.id}`);
-  //     } else if (
-  //       parseInt(response.data.id) > 9 &&
-  //       parseInt(response.data.id) < 100
-  //     ) {
-  //       setPokemonId(`0${response.data.id}`);
-  //     } else if (parseInt(response.data.id) > 99) {
-  //       setPokemonId(`${response.data.id}`);
-  //     }
-  //     setSpeciesLink(response.data.species.url);
-  //     setPokemon(response.data);
-  //     setLoaded(true);
-  //   });
-  // };
 
   return (
     <div className="test-container">
@@ -116,7 +85,25 @@ export default ({
           <div className="tiny-box-bottom-vertical"></div>
         </div>
         <p className="contents">CONTENTS</p>
-        <Link to={`/about`}>
+        <div className="seen">
+          <p>SEEN</p>
+          <p>151</p>
+        </div>
+        <div className="own">
+          <p>OWN</p>
+          <p>151</p>
+        </div>
+        <div className="music">
+          <p>MUSIC</p>
+          <div className="music-on-off">
+            {bgMusicStatus ? (
+              <p onClick={pauseBgMusic}>OFF</p>
+            ) : (
+              <p onClick={playBgMusic}>ON</p>
+            )}
+          </div>
+        </div>
+        <Link to={`/about`} onClick={playClickSound}>
           <p className="about-link">ABOUT</p>
         </Link>
       </div>

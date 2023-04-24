@@ -50,8 +50,11 @@ body {
 
 .dmg-img {
   width: 820px;
-  /* opacity: 0; */
+  /* opacity: .5; */
   filter: drop-shadow(-4px 4px 2.5px rgba(0,0,0,.55)) brightness(85%) contrast(90%);
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
 }
 
 .pokemon-fetch-button {
@@ -81,6 +84,32 @@ body {
   pointer-events: none;
 }
 
+.nintendo-logo {
+  position: absolute;
+  z-index: 0;
+  top: 120px;
+  left: 630px;
+  width: 20%;
+  filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.3));
+  animation-name: nintendo;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 1.5;
+}
+
+@keyframes nintendo {
+  0% {
+    top: 120px;
+  }
+
+  65% {
+    top: 370px;
+  }
+  100% {
+    top: 370px;
+  }
+}
+
 .pokemon-box {
   width: 420px;
   height: 380px;
@@ -90,6 +119,7 @@ body {
   position: absolute;
   top: 205px;
   left: 560px;
+  /* visibility: hidden; */
 }
 
 .list-sticky-parts {
@@ -251,11 +281,42 @@ body {
   text-decoration: none;
 }
 
+.seen, .own, .music {
+  position: relative;
+  text-align: left;
+  line-height: .2rem;
+}
+
+.seen {
+  top: 35px;
+  left: 325px;
+
+}
+
+.own {
+  top: 65px;
+  left: 325px;
+}
+
+.music {
+  top: 155px;
+  left: 325px;
+}
+
+.music p {
+  font-size: .95rem;
+}
+
+.music-on-off p {
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .about-link {
   color: rgba(47, 50, 6, .85);
   position: relative;
-  top: 335px;
-  left: 322px;
+  top: 180px;
+  left: 325px;
   font-size: .95rem;
 }
 
@@ -454,6 +515,7 @@ body {
   top: -126px;
   left: -43px;
 }
+
 
 /* Media Queries */
 
