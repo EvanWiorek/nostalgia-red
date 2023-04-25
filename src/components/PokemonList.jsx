@@ -103,7 +103,7 @@ export default ({
             )}
           </div>
         </div>
-        <Link to={`/about`} onClick={playClickSound}>
+        <Link to={`/nostalgia-red/about`} onClick={playClickSound}>
           <p className="about-link">ABOUT</p>
         </Link>
       </div>
@@ -115,7 +115,7 @@ export default ({
                 <>
                   <Link
                     key={idx}
-                    to={`/pokemon/${idx + 1}`}
+                    to={`/nostalgia-red/${idx + 1}`}
                     onClick={() => pokemonClick(pokemon.url)}
                   >
                     <div className="link-container">
@@ -141,7 +141,7 @@ export default ({
                 <>
                   <Link
                     key={idx}
-                    to={`/pokemon/${idx + 1}`}
+                    to={`/nostalgia-red/${idx + 1}`}
                     onClick={() => pokemonClick(pokemon.url)}
                   >
                     <div className="link-container">
@@ -167,7 +167,7 @@ export default ({
                 <>
                   <Link
                     key={idx}
-                    to={`/pokemon/${idx + 1}`}
+                    to={`/nostalgia-red/${idx + 1}`}
                     onClick={() => pokemonClick(pokemon.url)}
                   >
                     <div className="link-container">

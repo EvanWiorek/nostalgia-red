@@ -55,6 +55,7 @@ function App() {
   // }, []);
 
   const turnGameboyOn = () => {
+    setIsClicked(true);
     document.getElementById("on-button").style.display = "none";
     document.getElementById("screen-dark").style.display = "none";
     document.getElementById("dmg-img-off").style.display = "none";
@@ -94,9 +95,9 @@ function App() {
         {loadContent && (
           <div className="pokemon-box m-auto col-11">
             <Routes>
-              <Route path="/" element={<Navigate to="/pokemon" />} />
+              <Route path="/" element={<Navigate to="/nostalgia-red/" />} />
               <Route
-                path="/pokemon"
+                path="/nostalgia-red/"
                 element={
                   <PokemonList
                     pokemonArr={pokemonArr}
@@ -114,7 +115,7 @@ function App() {
                 }
               />
               <Route
-                path="/pokemon/:id"
+                path="/nostalgia-red/:id"
                 element={
                   loaded && (
                     <PokemonDisplay
@@ -125,7 +126,7 @@ function App() {
                   )
                 }
               />
-              <Route path="/about" element={<AboutDisplay />} />
+              <Route path="/nostalgia-red/about" element={<AboutDisplay />} />
             </Routes>
           </div>
         )}

@@ -17,7 +17,7 @@ export default ({ setPokemonArr, isClicked, setIsClicked}) => {
     playClickSound();
     e.preventDefault();
     setIsClicked(true);
-    navigate(`/pokemon`)
+    navigate(`/nostalgia-red/`)
   };
 
   useEffect(() => {
