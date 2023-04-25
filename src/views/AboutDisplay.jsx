@@ -48,7 +48,7 @@ export default (props) => {
       <div className="contact-link resume d-flex flex-column align-items-center">
         <a
           target="_blank"
-          href="https://docs.google.com/document/d/1XQz5mrmH2t0Qfg0P4-Rmm8_S1ALkwh4STLKqkjwvuDM/edit?usp=sharing"
+          href="https://docs.google.com/document/d/1tZlbV8r2pbCLak3IxiGfJN4ycTAuYcPlBnHfAlfiX-s/edit?usp=sharing"
         >
           <img src={resume} alt="resume" />
         </a>
