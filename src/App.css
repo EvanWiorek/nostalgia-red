@@ -348,7 +348,6 @@ body {
 
 .pokemon-list a {
   text-decoration: none;
-  /* color: rgb(47, 50, 6); */
   color: rgba(47, 50, 6, .85);
   padding-left: 20px;
 }
@@ -553,34 +552,40 @@ body {
 }
 
 /* About Page */
+.about-display {
+  overflow: scroll;
+  /* position: absolute; */
+  height: 105%;
+}
+
 .trainer-card-bg {
   width: 420px;
   height: 380px;
   filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.3));
+  position: relative;
+  top: -172px;
 }
 
 .my-name, .job-title, .website-name, .links-text {
   font-size: 1.1rem;
+  position: relative;
 }
 
 .my-name {
-  position: absolute;
-  top: 30px;
-  left: 40px;
+  top: 37px;
+  left: -69px;
   z-index: 1;
 }
 
 .job-title {
-  position: absolute;
-  top: 65px;
-  left: 40px;
+  top: 32px;
+  left: -46px;
   z-index: 1;
 }
 
 .website-name {
-  position: absolute;
-  top: 114px;
-  left: 40px;
+  top: 26px;
+  left: -58px;
   z-index: 1;
   text-decoration: none;
   color: rgba(47, 50, 6, .85);
@@ -588,30 +593,69 @@ body {
 }
 
 .links-text {
-  position: absolute;
-  top: 185px;
-  left: 161px;
+  top: 60px;
+  left: 2px;
   z-index: 1;
+  position: relative;
 }
 
-.linked-in, .github {
+.linked-in, .github, .email, .resume, .youtube, .website {
   position: relative;
-  width: 43px;
+  width: 41px;
   image-rendering: pixelated;
+  filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.3));
+  opacity: .9;
+  cursor: pointer;
 }
 
 .linked-in {
-  top: -126px;
-  left: -43px;
+  top: -298px;
+  left: -24px;
 }
 
 .github {
-  top: -126px;
-  left: -43px;
+  top: -298px;
+  left: 19px;
 }
 
-.hidden {
-  visibility: hidden !important;
+.email {
+  top: -298px;
+  left: 62px;
+}
+
+.website {
+  top: -298px;
+  left: 105px;
+}
+
+.resume {
+  top: -235px;
+  left: -20px;
+}
+
+.youtube {
+  top: -235px;
+  left: -145px;
+}
+
+.about-paragraphs {
+  text-align: left;
+  padding: 15px;
+  position: relative;
+  top: -200px;
+  margin-bottom: -200px;
+}
+
+.about-paragraphs a {
+  color: rgba(47, 50, 6, .9);
+}
+
+.scroll-down {
+  position: absolute;
+  left: 120px;
+  top: 400px;
+  z-index: 105;
+  color: rgba(255,255,255,.7);
 }
 
 

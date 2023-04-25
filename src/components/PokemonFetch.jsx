@@ -1,11 +1,20 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import clickSound from "../assets/click-sound.wav";
 
 export default ({ setPokemonArr, isClicked, setIsClicked}) => {
   const navigate = useNavigate();
 
+  const clickSoundLoaded = new Audio(clickSound);
+  clickSoundLoaded.volume = 0.05;
+
+  const playClickSound = () => {
+    clickSoundLoaded.play();
+  };
+
   const handleSubmit = (e) => {
+    playClickSound();
     e.preventDefault();
     setIsClicked(true);
     navigate(`/pokemon`)
