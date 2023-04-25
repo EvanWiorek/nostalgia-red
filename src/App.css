@@ -15,7 +15,7 @@
   width: 0px;
 }
 
-.noise-image {  
+.noise-image {
   position: absolute;
   left: 0%;
   top: 0%;
@@ -36,15 +36,15 @@ body {
 }
 
 @keyframes gradient-bg {
-0% {
-  background-position: 0% 50%;
-}
-50% {
-  background-position: 100% 50%;
-}
-100% {
-  background-position: 0% 50%;
-}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #on-button {
@@ -56,17 +56,17 @@ body {
   z-index: 102;
   padding: 5px 5px;
   cursor: pointer;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   border-radius: 10px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   animation: bgFade 14s infinite;
 }
 
 @keyframes bgFade {
   0% {
-  background-color: rgba(0,0,0,.4);
-  box-shadow: 0px 0px 10px rgba(255, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 1);
   }
 
   25% {
@@ -75,20 +75,19 @@ body {
   }
 
   50% {
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 10px rgb(72, 255, 0);
   }
 
   75% {
-    background-color: rgba(0,0,0,.1);
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 10px rgb(225, 255, 0);
   }
 
   100% {
-  background-color: rgba(0,0,0,.4);
-  box-shadow: 0px 0px 10px rgba(255, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 1);
   }
-  
 }
 
 #screen-dark {
@@ -103,14 +102,15 @@ body {
 
 .dmg-bg {
   position: absolute;
-  left: 21%;
+  left: 26%;
   top: 0%;
 }
 
 #dmg-img-on {
   width: 815px;
   /* opacity: .5; */
-  filter: drop-shadow(-4px 4px 2.5px rgba(0,0,0,.55)) brightness(85%) contrast(90%);
+  filter: drop-shadow(-4px 4px 2.5px rgba(0, 0, 0, 0.55)) brightness(85%)
+    contrast(90%);
   position: relative;
   z-index: 100;
   pointer-events: none;
@@ -121,7 +121,8 @@ body {
 #dmg-img-off {
   width: 815px;
   /* opacity: .5; */
-  filter: drop-shadow(-4px 4px 2.5px rgba(0,0,0,.55)) brightness(85%) contrast(90%);
+  filter: drop-shadow(-4px 4px 2.5px rgba(0, 0, 0, 0.55)) brightness(85%)
+    contrast(90%);
   position: relative;
   z-index: 100;
   pointer-events: none;
@@ -138,7 +139,7 @@ body {
   border: 0;
   padding: 6px 8px;
   color: white;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .pokemon-fetch-button {
@@ -149,7 +150,7 @@ body {
   z-index: 101;
   width: 100px;
   cursor: pointer;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   border-radius: 10px;
   animation: bgFade 14s infinite;
@@ -172,9 +173,13 @@ body {
   height: 400px;
   top: 176px;
   left: 23.2%;
-  background: linear-gradient(219deg, rgba(255,255,255,1) 0%, rgba(121,129,16,0) 100%);
+  background: linear-gradient(
+    219deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(121, 129, 16, 0) 100%
+  );
   /* background-color: #04363d; */
-  opacity: .25;
+  opacity: 0.25;
   border-radius: 6px;
   pointer-events: none;
 }
@@ -219,7 +224,7 @@ body {
   width: 420px;
   height: 380px;
   background-color: rgba(0, 0, 0, 0.07);
-  color: rgba(47, 50, 6, .9);
+  color: rgba(47, 50, 6, 0.9);
   text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 186px;
@@ -229,13 +234,13 @@ body {
 
 .list-sticky-parts {
   position: fixed;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .tiny-box {
   width: 18px;
   height: 18px;
-  border: 3px solid rgba(47, 50, 6, .95);
+  border: 3px solid rgba(47, 50, 6, 0.95);
   background-color: rgb(121, 129, 16);
   z-index: 10;
   position: absolute;
@@ -303,7 +308,7 @@ body {
   height: 380px;
   background-color: rgb(47, 50, 6);
   left: 300px;
-  opacity: .9;
+  opacity: 0.9;
   filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.3));
 }
 
@@ -315,7 +320,7 @@ body {
   top: 170px;
   left: 315px;
   filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.3));
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .thick-line {
@@ -326,7 +331,7 @@ body {
   top: 176px;
   left: 315px;
   filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.3));
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .contents {
@@ -337,7 +342,7 @@ body {
 }
 
 .link-container:hover {
-  background-image: url('/src/assets/list-arrow.png');
+  background-image: url("/src/assets/list-arrow.png");
   background-size: 4%;
   background-repeat: no-repeat;
   background-position: 5px 17px;
@@ -359,7 +364,7 @@ body {
 
 .pokemon-list a {
   text-decoration: none;
-  color: rgba(47, 50, 6, .85);
+  color: rgba(47, 50, 6, 0.85);
   padding-left: 20px;
 }
 
@@ -368,7 +373,7 @@ body {
 }
 
 .listed-link {
-  line-height: .2rem;
+  line-height: 0.2rem;
   margin-left: 20px;
 }
 
@@ -385,16 +390,17 @@ body {
   text-decoration: none;
 }
 
-.seen, .own, .music {
+.seen,
+.own,
+.music {
   position: relative;
   text-align: left;
-  line-height: .2rem;
+  line-height: 0.2rem;
 }
 
 .seen {
   top: 35px;
   left: 325px;
-
 }
 
 .own {
@@ -408,7 +414,7 @@ body {
 }
 
 .music p {
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 .music-on-off p {
@@ -417,11 +423,11 @@ body {
 }
 
 .about-link {
-  color: rgba(47, 50, 6, .85);
+  color: rgba(47, 50, 6, 0.85);
   position: relative;
   top: 180px;
   left: 325px;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 /* Pokemon Details Page */
@@ -437,7 +443,7 @@ body {
 .display-box-shadow {
   width: 420px;
   height: 378px;
-  filter: drop-shadow(-1px 1px 1.5px rgba(0, 0, 0, .7));
+  filter: drop-shadow(-1px 1px 1.5px rgba(0, 0, 0, 0.7));
   border-bottom: 1px solid #595f0c;
   border-left: 1px solid #595f0c;
   position: absolute;
@@ -477,7 +483,7 @@ body {
   left: 104px;
 }
 
-.box12{
+.box12 {
   top: 181px;
   left: 141px;
 }
@@ -546,7 +552,7 @@ body {
   position: absolute;
   margin-top: 175px;
   filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.4));
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .description {
@@ -557,7 +563,7 @@ body {
   left: 30px;
   /* background-color: #8c7191; */
   text-align: left;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   overflow: auto;
   line-height: 1.9rem;
 }
@@ -577,7 +583,10 @@ body {
   top: -172px;
 }
 
-.my-name, .job-title, .website-name, .links-text {
+.my-name,
+.job-title,
+.website-name,
+.links-text {
   font-size: 1.1rem;
   position: relative;
 }
@@ -599,7 +608,7 @@ body {
   left: -58px;
   z-index: 1;
   text-decoration: none;
-  color: rgba(47, 50, 6, .85);
+  color: rgba(47, 50, 6, 0.85);
   font-size: smaller;
 }
 
@@ -610,55 +619,79 @@ body {
   position: relative;
 }
 
-.linked-in, .github, .email, .resume, .youtube, .website {
+.linked-in,
+.github,
+.email,
+.resume,
+.youtube,
+.website {
   position: relative;
   width: 41px;
   image-rendering: pixelated;
   filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.3));
-  opacity: .9;
+  opacity: 0.9;
   cursor: pointer;
+  /* z-index: 100; */
 }
 
 .linked-in {
   top: -298px;
-  left: -24px;
+  left: 63px;
 }
 
 .github {
-  top: -298px;
-  left: 19px;
+  top: -340px;
+  left: 146px;
 }
 
 .email {
-  top: -298px;
-  left: 62px;
+  top: -382px;
+  left: 231px;
 }
 
 .website {
-  top: -298px;
-  left: 105px;
+  top: -424px;
+  left: 315px;
 }
 
 .resume {
-  top: -235px;
-  left: -20px;
+  top: -403px;
+  left: 146px;
 }
 
 .youtube {
-  top: -235px;
-  left: -145px;
+  top: -445px;
+  left: 231px;
+}
+
+div.contact-link span {
+  display: none;
+  position: absolute;
+  background: rgb(0, 0, 0, 0.3);
+  padding: 2px 5px;
+  color: #fff;
+  text-align: center;
+  font-size: 0.5rem;
+  margin-top: 2.5rem;
+  border: 0px;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+}
+
+div.contact-link:hover span {
+  display: block;
 }
 
 .about-paragraphs {
   text-align: left;
   padding: 15px;
   position: relative;
-  top: -200px;
-  margin-bottom: -200px;
+  top: -420px;
+  margin-bottom: -420px;
 }
 
 .about-paragraphs a {
-  color: rgba(47, 50, 6, .9);
+  color: rgba(47, 50, 6, 0.9);
 }
 
 .scroll-down {
@@ -666,21 +699,20 @@ body {
   left: 120px;
   top: 400px;
   z-index: 105;
-  color: rgba(255,255,255,.7);
+  color: rgba(255, 255, 255, 0.7);
 }
-
 
 /* Media Queries */
 
-/* Phone Size */ 
+/* Phone Size */
 @media only screen and (min-width: 240px) and (max-width: 767px) {
   body {
     max-height: 100vh;
     max-width: 110vw;
   }
-  
+
   .dmg-bg {
-    transform: scale(.6);
+    transform: scale(0.6);
     top: -30%;
     left: -52%;
   }
@@ -691,7 +723,7 @@ body {
     max-height: 100vh;
     overflow: hidden;
   }
-  
+
   .dmg-bg {
     left: 0%;
   }
