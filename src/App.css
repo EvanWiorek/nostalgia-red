@@ -47,11 +47,11 @@ body {
 }
 }
 
-
 #on-button {
   position: absolute;
-  top: 380px;
-  left: 670px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 200px;
   z-index: 102;
   padding: 5px 5px;
@@ -101,6 +101,12 @@ body {
   backdrop-filter: blur(5px);
 }
 
+.dmg-bg {
+  position: absolute;
+  left: 21%;
+  top: 0%;
+}
+
 #dmg-img-on {
   width: 815px;
   /* opacity: .5; */
@@ -123,6 +129,10 @@ body {
   margin: auto;
 }
 
+#go-back-button {
+  display: none;
+}
+
 .fetch-button {
   background: transparent;
   border: 0;
@@ -133,11 +143,11 @@ body {
 
 .pokemon-fetch-button {
   position: absolute;
-  /* top: 605px;
-  left: 710px; */
   top: 205px;
-  left: 445px;
+  left: 9.7%;
+  right: 90%;
   z-index: 101;
+  width: 100px;
   cursor: pointer;
   background-color: rgba(0,0,0,.4);
   backdrop-filter: blur(5px);
@@ -150,8 +160,8 @@ body {
   width: 480px;
   height: 430px;
   background-color: rgb(130, 138, 18);
-  top: 180px;
-  left: 530px;
+  top: 165px;
+  left: 20.5%;
   z-index: -1;
 }
 
@@ -160,9 +170,10 @@ body {
   z-index: 0;
   width: 438px;
   height: 400px;
-  top: 195px;
-  left: 550px;
+  top: 176px;
+  left: 23.2%;
   background: linear-gradient(219deg, rgba(255,255,255,1) 0%, rgba(121,129,16,0) 100%);
+  /* background-color: #04363d; */
   opacity: .25;
   border-radius: 6px;
   pointer-events: none;
@@ -172,8 +183,8 @@ body {
   position: absolute;
   z-index: 0;
   top: 120px;
-  left: 628px;
-  width: 20%;
+  left: 33.5%;
+  width: 290px;
   filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.3));
   animation-name: nintendo;
   animation-duration: 4s;
@@ -187,10 +198,10 @@ body {
   }
 
   70% {
-    top: 370px;
+    top: 350px;
   }
   100% {
-    top: 370px;
+    top: 350px;
   }
 }
 
@@ -199,8 +210,8 @@ body {
   width: 420px;
   height: 380px;
   position: absolute;
-  top: 205px;
-  left: 558px;
+  top: 186px;
+  left: 24.2%;
   display: none;
 }
 
@@ -211,8 +222,8 @@ body {
   color: rgba(47, 50, 6, .9);
   text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 205px;
-  left: 558px;
+  top: 186px;
+  left: 24.2%;
   /* visibility: hidden; */
 }
 
@@ -665,38 +676,23 @@ body {
 @media only screen and (min-width: 240px) and (max-width: 767px) {
   body {
     max-height: 100vh;
+    max-width: 110vw;
+  }
+  
+  .dmg-bg {
+    transform: scale(.6);
+    top: -30%;
+    left: -52%;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  body {
+    max-height: 100vh;
     overflow: hidden;
   }
   
-  .dmg-img {
-    width: 580px;
-    overflow-x: hidden;
-    transform: translateX(-95px);
-    /* opacity: 0; */
+  .dmg-bg {
+    left: 0%;
   }
-
-  .background-green {
-    top: 100px;
-    left: 35px;
-    z-index: -1;
-  }
-
-  .pokemon-box {
-    top: 95px;
-    left: -15px;
-    transform: scale(.7);
-  }
-
-  .pokemon-sprite {
-    mix-blend-mode: multiply;
-    width: 6.15rem;
-  }
-
-  .sprite-container {
-    background-color: #777e13;
-    position: absolute;
-    width: 6.2rem;
-    height: 6.3rem;
-  }
-  
 }

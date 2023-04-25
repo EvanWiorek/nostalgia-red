@@ -46,6 +46,7 @@ function App() {
   const nintendoStartup = () => {
     setLoadContent(true);
     document.getElementById("startup-bg").style.display = "none";
+    document.getElementById("go-back-button").style.display = "block";
     playBgMusic();
   };
 
@@ -67,24 +68,23 @@ function App() {
   return (
     <div className="text-center mt-3 m-auto">
       <div className="noise-image"></div>
-      <div className="mb-3 pokemon-fetch-button">
-        <PokemonFetch
-          setPokemonArr={setPokemonArr}
-          pokemonArr={pokemonArr}
-          isClicked={isClicked}
-          setIsClicked={setIsClicked}
-        />
-      </div>
       <h1 id="on-button" onClick={turnGameboyOn}>
         Click here to turn on Gameboy
       </h1>
-      <div id="screen-dark" ></div>
+      <div id="screen-dark"></div>
       <div className="dmg-bg">
+        <div className="mb-3 pokemon-fetch-button" id="go-back-button">
+          <PokemonFetch
+            setPokemonArr={setPokemonArr}
+            pokemonArr={pokemonArr}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
+          />
+        </div>
         <img src={dmgBgOff} alt="DMG" id="dmg-img-off" />
         <img src={dmgBgOn} alt="DMG" id="dmg-img-on" />
         <div id="startup-bg"></div>
         <div className="glass-illusion"></div>
-
         <img
           src={nintendoLogo}
           alt="Nintendo Logo"
